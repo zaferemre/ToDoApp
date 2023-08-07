@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  background: #222831;
+}
+
+.container {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  border-radius: 28px 28px 28px 28px;
+  -moz-border-radius: 28px 28px 28px 28px;
+  -webkit-border-radius: 28px 28px 28px 28px;
+  border: 3px dashed #f96d00;
+  background-color: #393e46;
+}
+
+.todoForm {
+  text-align: justify;
+  background-color: #ff6f3c;
+}
+
+.todos {
+  background-color: #ff6f3c;
+}
+
+button {
+  font-weight: 400;
+  font-style: italic;
+  text-decoration: none;
+  padding: 4px;
+  border: 0px solid #000;
+  border-radius: 5px;
+  display: flexbox;
+  flex-flow: column;
+  margin-left: 10px;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+ul {
+  position: relative;
+  margin: auto;
+  align-self: center;
+  color: aliceblue;
+}
+
+h1 {
+  color: wheat;
+}
+
+h4 {
+  color: #f2f2f2;
+}
+
+#todo {
+  background-color: #222831;
+  text-align: center;
+  padding: 5px;
+  color: white;
+}
