@@ -1,7 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
 import { Todo } from "./models/todo.js";
-import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import cors from "cors";
 
@@ -18,6 +17,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const PORT = process.env.PORT || 3000;
+const MONGOCREDENTIALS = process.env.CREDENTIALS;
 
 // Routes
 app.get(`/todos`, async (req, res) => {
@@ -68,7 +68,7 @@ app.patch("/todos/:id/toggle", async (req, res) => {
 const start = async () => {
   try {
     await mongoose.connect(
-      "mongodb+srv://zaferce34:<şifre>@cluster0.zak7c2y.mongodb.net/?retryWrites=true&w=majority"
+      `mongodb+srv://${MONGOCREDENTIALS}@cluster0.zak7c2y.mongodb.net/?retryWrites=true&w=majority`
     );
     app.listen(PORT, () => {
       console.log("App listening port" + PORT);
@@ -83,5 +83,3 @@ start();
 if (typeof document !== "undefined") {
   document.getElementById("todoForm").addEventListener("submit", addTodo);
 }
-
-export { start };
